@@ -1,0 +1,19 @@
+# Python 缓存文件
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+venv/
+env/
+
+# ⚠️ 交易系统的绝对安全红线：配置文件与密钥
+config/
+*.env
+*.json
+keys.txt
+
+# 日志与本地数据
+logs/
+*.log
+data/
+*.csv
