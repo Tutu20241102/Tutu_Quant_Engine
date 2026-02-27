@@ -40,3 +40,15 @@ Only standard data science libraries are required. No external API keys are need
 
 ```bash
 pip install numpy matplotlib
+## 📁 Research Modules & Backtest Engine
+
+The `research/` directory contains the core mathematical models and stress-testing engines used to validate our trading logic:
+
+* **`gbm_monte_carlo.py` (Baseline Market Pricing):** Simulates standard continuous market dynamics using Geometric Brownian Motion.
+* **`mjd_stress_test.py` (Black Swan Tail-Risk Pricing):** Injects Poisson jump processes to evaluate the destructive power of macro liquidity crunches and liquidation cascades.
+* **`btc_grid_backtest.py` (Anti-fragile Grid Backtest Engine):** A ruthless backtesting environment pitting standard grid trading against an "anti-fragile" wide-grid strategy under extreme market crashes.
+
+### 📉 Stress-Test Visualization (The Mathematical Proof)
+The chart below demonstrates the survival rate and equity curve of our **Anti-fragile Grid ($11k - $100k)** versus a normal grid and spot holding during a 3-year simulated MJD black swan event:
+
+![BTC Grid Backtest Result](research/btc_grid_backtest_result.png)
