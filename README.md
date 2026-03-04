@@ -24,6 +24,17 @@ $$dS_t = \mu S_t dt + \sigma S_t dW_t + S_t dJ_t$$
 
 ---
 
+## 📉 Tail-Risk Pricing Results (10,000 Monte Carlo Paths)
+
+Before configuring any trading algorithms, we must mathematically locate the absolute floor of BTC during a systemic crash. We simulated 10,000 future price paths comparing the two models:
+
+* **Standard GBM (Retail Illusion):** Under normal market conditions, the 5th percentile worst-case scenario sits at **~$54,183**. This is where standard traders place their stop-losses, assuming it's the "iron bottom".
+* **MJD Model (The True Tail-Risk):** Once we inject macro liquidity crunches and liquidation cascades (Poisson jumps), the true 5th percentile tail-risk floor collapses to **~$11,426**.
+
+**The Quant Conclusion:** The math exposes a massive fragility gap. A trading system anchored to the standard GBM floor will be completely destroyed during a tail event. Therefore, our **Anti-fragile Grid** must be mathematically anchored to the MJD floor (**$11,000**).
+
+---
+
 ## 📁 Research & Backtest Modules
 
 The `research/` directory houses the core engines used to validate our trading logic:
